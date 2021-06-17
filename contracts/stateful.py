@@ -6,5 +6,4 @@ def stateful():
 
 
 if __name__ == "__main__":
-    program = stateful()
-    print(compileTeal(program, Mode.Application))
+    print(compileTeal(stateful(), Mode.Application, version=3))
