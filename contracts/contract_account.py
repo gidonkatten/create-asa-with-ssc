@@ -1,9 +1,11 @@
+import sys
 from pyteal import *
 
 
-def contract_account():
-    return Int(1)
+def contract_account(app_id):
+    return Int(app_id)
 
 
 if __name__ == "__main__":
-    print(compileTeal(contract_account(), Mode.Signature, version=3))
+    arg = int(sys.argv[1])
+    print(compileTeal(contract_account(arg), Mode.Signature, version=3))
