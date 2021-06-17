@@ -1,9 +1,9 @@
 # create-asa-with-ssc
 
-The project **hasn't been security audited** and should not be used in a production environment.
+This project **hasn't been security audited** and should not be used in a production environment.
 
 ## Setup
-To insall all required packcages, run: `pip install -r requirements`
+To install all required packages, run: `pip install -r requirements`.
 
 ## Usage
 There are a number of bash script files which execute the goal commands for you.
