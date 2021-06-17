@@ -1,0 +1,13 @@
+{
+  "name" : "create-asa-with-ssc",
+  "version" : "1.0",
+  "stateful_contracts" : [ {
+    "name" : "SfContract-1",
+    "approval_program" : "src/approval_progam.teal",
+    "clear_state_program" : "src/clear_state_program.teal",
+    "global-byteslices" : 0,
+    "global-ints" : 0,
+    "local-byteslices" : 0,
+    "local-ints" : 0
+  } ]
+}
