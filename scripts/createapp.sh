@@ -27,7 +27,7 @@ APP_ID=$(
     --approval-prog $TEAL_APPROVAL_PROG \
     --clear-prog $TEAL_CLEAR_PROG \
     --global-byteslices 1 \
-    --global-ints 0 \
+    --global-ints 1 \
     --local-byteslices 0 \
     --local-ints 0 |
     grep Created |
@@ -35,7 +35,7 @@ APP_ID=$(
 )
 echo "App ID = ${APP_ID}"
 
-# compile contract account
+# compile contract account with app_id
 python $PYTEAL_ESCROW ${APP_ID} > $TEAL_ESCROW
 ESCROW_ADDRESS=$(
   ${gcmd} clerk compile -n ${TEAL_ESCROW} \
