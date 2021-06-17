@@ -18,6 +18,7 @@ def contract_account(app_id):
     # fund 1 asa that has been created by escrow
     on_fund_asa = Seq([
         Assert(Txn.type_enum() == TxnType.AssetTransfer),
+        Assert(Txn.asset_sender() == Global.zero_address()),
         Assert(asset_close_to_check),
         Assert(Txn.asset_amount() == Int(1)),
         Int(1)
