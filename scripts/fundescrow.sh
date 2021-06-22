@@ -21,5 +21,5 @@ echo "Escrow Address = ${ESCROW_ADDRESS}"
 
 # set escrow address
 AMOUNT=10000000000
-${gcmd} clerk send -a ${AMOUNT} -f ${MASTER} -t ${ESCROW_ADDRESS}
+${gcmd} clerk send -a ${AMOUNT} -f "${MASTER}" -t "${ESCROW_ADDRESS}"
 
