@@ -25,7 +25,7 @@ echo "Escrow Address = ${ESCROW_ADDRESS}"
 
 # create transactions
 ${gcmd} app call --app-id ${APP_ID} --app-arg "str:create_asa" -f ${MASTER} -o unsignedtx0.tx
-${gcmd} asset create --creator ${ESCROW_ADDRESS} --total 10000000 --name ${ASA_NAME} --decimals 0 -o unsignedtx1.tx
+${gcmd} asset create --creator ${ESCROW_ADDRESS} --total 10000000 --name "${ASA_NAME}" --decimals 0 -o unsignedtx1.tx
 # combine transactions
 cat unsignedtx0.tx unsignedtx1.tx > combinedtransactions.tx
 # group transactions
